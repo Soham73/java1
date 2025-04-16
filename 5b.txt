@@ -1,0 +1,33 @@
+class Outer {
+    static class LinkList {
+        int[] list = new int[10];
+        static int index = 0;
+
+        void add(int x) {
+            list[index] = x;
+            index++;
+        }
+
+        void display() {
+            for (int i = 0; i < index; i++) {
+                System.out.print(list[i] + " ");
+            }
+            System.out.println();
+        }
+
+        void remove() {
+            index--;
+        }
+    }
+
+    public static void main(String[] args) {
+        Outer.LinkList a1 = new Outer.LinkList();
+        a1.add(10);
+        a1.add(20);
+        a1.add(30);
+
+        a1.display();    // Output: 10 20 30
+        a1.remove();     // Removes last element (30)
+        a1.display();    // Output: 10 20
+    }
+}

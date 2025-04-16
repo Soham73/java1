@@ -1,0 +1,36 @@
+class shape{
+void calculatearea(){
+}
+}
+class circle extends shape{
+double r;
+void input(double radius){
+r=radius;
+}
+void calculatearea(){
+double area=3.14159*r*r;
+System.out.println("area of circle "+area);
+}
+}
+class rectangle extends shape{
+double l;
+double b;
+void input(double len,double bred){
+l=len;
+b=bred;
+}
+void calculatearea(){
+double area=l*b;
+System.out.println("area of rectangle "+area);
+}
+}
+public class inheritance{
+public static void main(String args[]){
+circle a1=new circle();
+rectangle a2=new rectangle();
+a1.input(10);
+a2.input(3.1,6.2);
+a1.calculatearea();
+a2.calculatearea();
+}
+}

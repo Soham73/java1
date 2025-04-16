@@ -1,0 +1,17 @@
+class Calculator {
+    void addition(int a, int b) {
+        int z = a + b;
+        System.out.println("Sum: " + z);
+    }
+
+    void addition(double x, double y) {
+        double z = x + y;
+        System.out.println("Sum: " + z);
+    }
+
+    public static void main(String[] args) {
+        Calculator p1 = new Calculator();
+        p1.addition(10, 2);      
+        p1.addition(1.2, 1.5);   
+    }
+}

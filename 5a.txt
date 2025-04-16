@@ -1,0 +1,12 @@
+class outer{
+class inner{
+void display(){
+System.out.println("this in inner class");
+}
+}
+public static void main(String args[]){
+outer out=new outer();
+outer.inner inn=out.new inner();
+inn.display();
+}
+}
